@@ -15,39 +15,20 @@ It allows you use the [TransactionHttp.announceSync(_)](https://nemtech.github.i
 
 - [v0.1](https://github.com/nemtech/nem2-camel/releases/tag/v0.1)
 
-## Dependencies
-
-[SBT][sbt]: Scala Build Tool v1.0
-
-## Run
-
-```bash
-$> sbt run
-```
-
-It starts the [Apache Camel][apache-camel] server.
-
-## Build
-
-```bash
-$> sbt assembly
-```
-
-It generates a `nem2-camel.jar` file under `./target/scala-2.12` folder.
 
 ## Usage
 
 `java -jar nem2-camel.jar` to run it with default options
 
-* -help. prints help message
+* --help. prints help message
 
 `java -jar nem2-camel.jar --help`
 
-* -url. sets a custom catapult node
+* --url. sets a custom catapult node
 
 `java -jar nem2-camel.jar --url http://localhost:3000`
 
-* -accountsFile. uses a custom set of accounts and their channel to subscribe. Example:
+* --accountsFile. uses a custom set of accounts and their channel to subscribe. Example:
 
 `java -jar nem2-camel.jar --accountsFile ./accounts.csv`
 
@@ -56,6 +37,28 @@ It generates a `nem2-camel.jar` file under `./target/scala-2.12` folder.
 A CSV file with the address to subscribe followed by the channels to subscribe to
 
 `SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY,status,unconfirmedAdded`
+
+## For developers
+
+**Dependencies**
+
+[SBT][sbt]: Scala Build Tool v1.0
+
+**Run in development mode**
+
+```bash
+$> sbt run
+```
+
+It starts the [Apache Camel][apache-camel] server.
+
+**Build for production**
+
+```bash
+$> sbt assembly
+```
+
+It generates a `nem2-camel.jar` file under `./target/scala-2.12` folder.
 
 [sbt]: http://www.scala-sbt.org/
 [apache-camel]: https://camel.apache.org
