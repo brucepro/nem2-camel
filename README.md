@@ -13,7 +13,7 @@ It allows you use the [TransactionHttp.announceSync(_)](https://nemtech.github.i
 
 ## Download
 
-// Comming soon.
+- [v0.1](https://github.com/nemtech/nem2-camel/releases/tag/v0.1)
 
 ## Dependencies
 
