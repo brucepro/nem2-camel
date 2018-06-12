@@ -16,13 +16,16 @@
 
 package io.nem.camel.routes
 
-import org.apache.camel.CamelContext
 import org.apache.camel.builder.RouteBuilder
+import org.apache.camel.{CamelContext, LoggingLevel}
+import org.slf4j.LoggerFactory
 
 case class HttpProxyRoute(camelContext: CamelContext, serverUrl: String) extends RouteBuilder(camelContext) {
+  private val logger = LoggerFactory.getLogger(classOf[HttpProxyRoute])
 
   override def configure(): Unit = {
-    from("netty4-http:http://0.0.0.0:9000?matchOnUriPrefix=true&throwExceptionOnFailure=false")
-      .to(s"netty4-http:$serverUrl?throwExceptionOnFailure=false")
+    from("netty4-http:http://0.0.0.0:9000?matchOnUriPrefix=true&throwExceptionOnFailure=false&bridgeEndpoint=true&exchangePattern=InOut")
+      .log(LoggingLevel.INFO, "proxying non announce transaction call ${header.uri}")
+      .to(s"netty4-http:$serverUrl?throwExceptionOnFailure=false&bridgeEndpoint=true")
   }
 }

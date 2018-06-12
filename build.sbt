@@ -1,6 +1,6 @@
 name := "nem2-camel"
 
-version := "0.1"
+version := "0.1.1"
 
 scalaVersion := "2.12.3"
 
@@ -19,7 +19,10 @@ libraryDependencies ++= Seq(
 
   "commons-cli" % "commons-cli" % "1.4",
   "com.github.tototoshi" %% "scala-csv" % "1.3.5",
-  "com.fasterxml.jackson.module" % "jackson-module-scala_2.12" % "2.9.0"
+  "com.fasterxml.jackson.module" % "jackson-module-scala_2.12" % "2.9.0",
+
+  "javax.xml.bind" % "jaxb-api" % "2.3.0",
+  "javax.activation" % "activation" % "1.1.1"
 )
 
 mainClass in assembly := Some("io.nem.camel.Server")

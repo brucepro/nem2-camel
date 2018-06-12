@@ -11,10 +11,11 @@ It allows you use the [TransactionHttp.announceSync(_)](https://nemtech.github.i
 
 :warning: It does not forward the WebSockets.
 
+Requires at least Java version 8
+
 ## Download
 
-- [v0.1](https://github.com/nemtech/nem2-camel/releases/tag/v0.1)
-
+- [v0.1.1](https://github.com/nemtech/nem2-camel/releases/tag/v0.1.1)
 
 ## Usage
 
