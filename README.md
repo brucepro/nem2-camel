@@ -60,5 +60,9 @@ $> sbt assembly
 
 It generates a `nem2-camel.jar` file under `./target/scala-2.12` folder.
 
+## License
+
+Copyright (c) 2018 NEM Licensed under the Apache License 2.0
+
 [sbt]: http://www.scala-sbt.org/
 [apache-camel]: https://camel.apache.org
