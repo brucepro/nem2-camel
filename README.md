@@ -1,6 +1,7 @@
-# Deprecation Notice
+# DEPRECATION NOTICE
 
-The ``nem2-camel`` package is no longer maintained. To continue using the project or advance its development, please create a custom fork.
+The ``nem2-camel`` package is no longer maintained.
+To continue using the project or advance its development, please create a custom fork.
 
 # nem2-camel
 
