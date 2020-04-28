@@ -1,6 +1,8 @@
-# nem2-camel
+# Deprecation Notice
 
-:warning: nem2-camel is in experimental stage.
+The ``nem2-camel`` package is no longer maintained. To continue using the project or advance its development, please create a custom fork.
+
+# nem2-camel
 
 Starts a server that listens the catapult-rest calls and acts as a proxy.
 When it detects a transaction announce, it waits for the confirmation via WebSockets and return the message to the HTTP call.
@@ -9,9 +11,9 @@ In summary, it turns the asynchronous API to announce transactions into synchron
 
 It allows you use the [TransactionHttp.announceSync(_)](https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_transactionhttp_.transactionhttp.html#announcesync) method from [nem2-sdks](https://nemtech.github.io/sdk/overview.html#).
 
-:warning: It does not forward the WebSockets.
+## Requirements
 
-Requires at least Java version 8
+- Java version 8
 
 ## Download
 
